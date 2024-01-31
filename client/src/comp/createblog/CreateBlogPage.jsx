@@ -31,7 +31,7 @@ const CreateBlogPage = () => {
       formData.append("newPost", image);
       if (image) {
         //API CALL TO UPLOAD IMAGE
-        await fetch("http://localhost:8000/upload", {
+        await fetch("https://repotoupload.vercel.app/upload", {
           method: "POST",
           headers: {
             Accept: "application/json",

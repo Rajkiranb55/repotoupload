@@ -18,7 +18,7 @@ const SIgnUp = ({ isUserAUthenticated }) => {
     console.log("signing in", formData);
     let responseData;
     axios
-      .post("http://localhost:8000/signup", formData)
+      .post("https://repotoupload.vercel.app/signup", formData)
       .then(({ data }) => {
         console.log(data);
       })
@@ -33,7 +33,7 @@ const SIgnUp = ({ isUserAUthenticated }) => {
     console.log("loggin in with ", formData);
 
     let responseData;
-    await fetch("http://localhost:8000/login", {
+    await fetch("https://repotoupload.vercel.app/login", {
       method: "POST",
       headers: {
         Accept: "application/form-data",

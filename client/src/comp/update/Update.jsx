@@ -27,7 +27,7 @@ const Update = () => {
   const { id } = useParams();
   useEffect(() => {
     const fetchData = async () => {
-      fetch(`http://localhost:8000/blogdata/${id}`)
+      fetch(`https://repotoupload.vercel.app/blogdata/${id}`)
         .then((response) => response.json())
         .then((data) => setPost(data));
     };
@@ -41,7 +41,7 @@ const Update = () => {
       formData.append("newPost", image);
       if (image) {
         //API CALL TO UPLOAD IMAGE
-        await fetch("http://localhost:8000/upload", {
+        await fetch("https://repotoupload.vercel.app/upload", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -72,7 +72,7 @@ const Update = () => {
   };
   const updatePost = () => {
     if (localStorage.getItem("auth-token")) {
-      fetch(`http://localhost:8000/updatepost2/${id}`, {
+      fetch(`https://repotoupload.vercel.app/updatepost2/${id}`, {
         method: "PUT",
         headers: {
           Accept: "application/form-data",

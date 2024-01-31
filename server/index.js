@@ -16,7 +16,7 @@ const cors = require("cors");
 server.use(express.json());
 server.use(cors());
 //initiating the server on 8000 port
-server.listen(8000, () => {
+server.listen("https://repotoupload.vercel.app", () => {
   console.log("server started");
 });
 
@@ -123,7 +123,7 @@ server.use("/images", express.static("upload/images"));
 server.post("/upload", upload.single("newPost"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:8000/images/${req.file.filename}`,
+    image_url: `https://repotoupload.vercel.app/${req.file.filename}`,
   });
 });
 

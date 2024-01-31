@@ -11,7 +11,7 @@ const Posts = () => {
   const { filter } = useContext(UserContext);
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://localhost:8000/allposts")
+      fetch("https://repotoupload.vercel.app/allposts")
         .then((response) => response.json())
         .then((data) => setPosts(data));
     };

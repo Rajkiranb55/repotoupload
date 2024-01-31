@@ -1,0 +1,13 @@
+img {
+  width: 400px;
+  height: 400px;
+}
+.icons {
+  font-size: 40px;
+  margin: 30px;
+  cursor: pointer;
+  background-color: bisque;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+}

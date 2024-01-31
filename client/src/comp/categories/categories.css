@@ -1,0 +1,16 @@
+.categories_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  background: whitesmoke;
+  padding: 20px;
+}
+.create_blog_btn {
+  text-decoration: none;
+  color: black;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}

@@ -14,7 +14,14 @@ const server = express();
 const cors = require("cors");
 
 server.use(express.json());
-server.use(cors());
+
+server.use(cors(
+    {
+        origin: ["https://repotoupload-61js.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 //initiating the server on 8000 port
 server.listen("https://repotoupload.vercel.app", () => {
   console.log("server started");
